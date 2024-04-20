@@ -1,4 +1,6 @@
+import 'package:easylink/Screens/AdminPage.dart';
 import 'package:easylink/Screens/Welcome/welcome_screen.dart';
+import 'package:easylink/Screens/classeTemplate.dart';
 import 'package:easylink/constants.dart';
 import 'package:easylink/firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
               borderSide: BorderSide.none,
             ),
           )),
-      home: const WelcomeScreen(),
+      home: ClassTemplate(className: '2in2',),
     );
   }
 }

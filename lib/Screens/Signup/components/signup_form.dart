@@ -63,7 +63,7 @@ class _SignUpFormState extends State<SignUpForm> {
             onPressed: () {
                _signUp();
             },
-            child: Text("Sign Up".toUpperCase()),
+            child: Text("Sign ".toUpperCase()),
           ),
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
@@ -85,6 +85,7 @@ class _SignUpFormState extends State<SignUpForm> {
   }
  void _signUp() async {
 
+  print("hello");
 setState(() {
   var isSigningUp = true;
 });

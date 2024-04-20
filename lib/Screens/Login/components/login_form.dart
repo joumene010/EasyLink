@@ -1,3 +1,4 @@
+import 'package:easylink/Screens/Welcome/welcome_screen.dart';
 import 'package:easylink/common/toast.dart';
 import 'package:easylink/firebase_auth_implementation/firebase_auth_services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -68,16 +69,13 @@ class _LoginFormState extends State<LoginForm> {
         const SizedBox(height: defaultPadding),
         ElevatedButton(
           onPressed: () {
-            email = _emailController.text;
-            password = _passwordController.text;
-
-            print("email :$email");
-            print("password:$password");
+           _signIn();
           },
           child: Text(
             "Login".toUpperCase(),
           ),
         ),
+         
         const SizedBox(height: defaultPadding),
         AlreadyHaveAnAccountCheck(
           press: () {
@@ -103,14 +101,19 @@ class _LoginFormState extends State<LoginForm> {
     String password = _passwordController.text;
 
     User? user = await _auth.signInWithEmailAndPassword(email, password);
-
+    print("user");
     setState(() {
       _isSigning = false;
     });
 
     if (user != null) {
       showToast(message: "User is successfully signed in");
-      Navigator.pushNamed(context, "/home");
+      Navigator.push(context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const WelcomeScreen();
+                  },
+                ));
     } else {
       showToast(message: "some error occured");
     }
