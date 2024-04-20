@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "870303052480",
+    "project_id": "easylink-60d4a",
+    "storage_bucket": "easylink-60d4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870303052480:android:2d0531ffa63ac1290f7325",
+        "android_client_info": {
+          "package_name": "com.example.easylink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcP3RFZJN6oFeKgJJENQziX-LGYpl6jlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
